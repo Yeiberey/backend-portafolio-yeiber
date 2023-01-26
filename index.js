@@ -1,14 +1,28 @@
-const express = require("express");
-const server = express();
-const { Router } = require("express");
-const router = Router();
+//                       _oo0oo_
+//                      o8888888o
+//                      88" . "88
+//                      (| -_- |)
+//                      0\  =  /0
+//                    ___/`---'\___
+//                  .' \\|     |// '.
+//                 / \\|||  :  |||// \
+//                / _||||| -:- |||||- \
+//               |   | \\\  -  /// |   |
+//               | \_|  ''\---/''  |_/ |
+//               \  .-\__  '-'  ___/-. /
+//             ___'. .'  /--.--\  `. .'___
+//          ."" '<  `.___\_<|>_/___.' >' "".
+//         | | :  `- \`.;`\ _ /`;.`/ - ` : | |
+//         \  \ `_.   \_ __\ /__ _/   .-` /  /
+//     =====`-.____`.___ \_____/___.-`___.-'=====
+//                       `=---='
+//     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+const server = require("./src/app.js");
+const { conn } = require("./src/db.js");
 
-router.get("/hola", async (req, res) => {
-  try {
-    res.status(200).json({ hola: "yeiber" });
-  } catch (error) {
-    res.status(404).send(error.message);
-  }
+// Syncing all the models at once.
+conn.sync({ force: false }).then(() => {
+  server.listen(process.env.PORT, () => {
+    console.log(`%s listening at ${process.env.PORT}`); // eslint-disable-line no-console
+  });
 });
-server.use(router);
-server.listen(3001);
