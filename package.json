@@ -1,0 +1,31 @@
+{
+  "name": "backend-portafolio-yeiber",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yeiberey/backend-portafolio-yeiber.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Yeiberey/backend-portafolio-yeiber/issues"
+  },
+  "homepage": "https://github.com/Yeiberey/backend-portafolio-yeiber#readme",
+  "dependencies": {
+    "cloudinary": "^1.32.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "sequelize": "^6.3.4",
+    "cookie-parser": "^1.4.5",
+    "morgan": "^1.10.0",
+    "multer": "^1.4.5-lts.1",
+    "pg": "^8.3.0",
+    "cors": "^2.8.5"
+  }
+}
