@@ -9,6 +9,6 @@ const routes = require("./routes/index.js");
 // const cors = require("cors");
 
 server.name = "API";
-server.use("/", routes);
+// server.use("/", routes);
 
 module.exports = server;
