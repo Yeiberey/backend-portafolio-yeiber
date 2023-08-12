@@ -20,7 +20,7 @@ router.get("/", async (req, res) => {
     res.status(200).json(activities);
   } catch ({ message }) {
     res.status(404).send(message);
-  }
+  }h
 });
 router.get("/:activityId", async (req, res) => {
   try {
